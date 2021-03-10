@@ -17,8 +17,16 @@ from django.contrib import admin
 from django.urls import path
 
 from application.views import index
+from application.views import page1
+from application.views import page2
+from application.views import page3
+from application.views import page4
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+    path('', index),
+    path('page1/', page1),
+    path('page2/', page2),
+    path('page3/', page3),
+    path('page4/', page4)
 ]
