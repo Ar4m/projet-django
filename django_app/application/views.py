@@ -12,5 +12,5 @@ def page2(request):
 def page3(request):
     return render(request, 'home/page3.html')
 
-def page4(request):
-    return render(request, 'home/page4.html')
+def contact(request):
+    return render(request, 'home/contact.html')
