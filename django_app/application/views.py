@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, HttpRequest
 from .forms import ResumeForm
 
 def index(request):
@@ -19,10 +19,8 @@ def candidature(request):
     if request.method == "POST":
         form = ResumeForm(request.POST)
 
-        #if form.is_valid():
-        #    n = form.cleaned_data["name"]
-        #    t = ToDoList(name=n)
-        #    t.save()
+        if form.is_valid():
+            form.save()
 
         return HttpResponseRedirect('/')
     
