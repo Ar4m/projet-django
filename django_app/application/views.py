@@ -19,6 +19,8 @@ def merci(request):
 
 def candidature(request):
 
+    form = ResumeForm()
+
     if request.method == "POST":
         form = ResumeForm(request.POST)
 
