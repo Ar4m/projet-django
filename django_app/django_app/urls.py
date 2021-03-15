@@ -21,6 +21,7 @@ from application.views import page1
 from application.views import page2
 from application.views import page3
 from application.views import candidature
+from application.views import merci
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +29,6 @@ urlpatterns = [
     path('page1/', page1),
     path('page2/', page2),
     path('page3/', page3),
-    path('candidature/', candidature)
+    path('candidature/', candidature),
+    path('merci/', merci)
 ]

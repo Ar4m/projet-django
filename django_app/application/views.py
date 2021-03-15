@@ -14,6 +14,9 @@ def page2(request):
 def page3(request):
     return render(request, 'home/page3.html')
 
+def merci(request):
+    return render(request, 'home/merci.html')
+
 def candidature(request):
 
     if request.method == "POST":
@@ -22,7 +25,7 @@ def candidature(request):
         if form.is_valid():
             form.save()
 
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/merci')
     
     else:
         form = ResumeForm()
